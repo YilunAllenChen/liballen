@@ -14,6 +14,9 @@ target_include_directories(liballen INTERFACE
     $<INSTALL_INTERFACE:include>
 )
 
+add_executable(liballen_main src/main.cpp)
+target_link_libraries(liballen_main PRIVATE liballen)
+
 enable_testing()
 
 add_executable(liballen_tests tests/test_main.cpp)
